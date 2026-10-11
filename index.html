@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="brand">✓ TaskFlow</div>
+        <span class="header-text">Organize your day</span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+            <h1>My To-Do List</h1>
+            <p>Plan your day. Complete your goals.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total Tasks</span>
+                <h2 id="totalCount">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Pending</span>
+                <h2 id="pendingCount">0</h2>
+            </div>
+            <div class="stat-card">
+                <span>Completed</span>
+                <h2 id="completedCount">0</h2>
+            </div>
+        </section>
+
+        <section class="task-panel">
+            <h2 id="formTitle">Add a New Task</h2>
+
+            <form id="taskForm">
+                <label for="taskTitle">Task name</label>
+                <input id="taskTitle" type="text"
+                    placeholder="e.g. Practice JavaScript" required>
+
+                <label for="taskDescription">Description</label>
+                <textarea id="taskDescription"
+                    placeholder="Enter task details (optional)"
+                    rows="3"></textarea>
+
+                <div class="form-row">
+                    <div>
+                        <label for="taskDate">Due date</label>
+                        <input id="taskDate" type="date">
+                    </div>
+                    <div>
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority">
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="saveButton"
+                        class="primary-btn">+ Add Task</button>
+                    <button type="button" id="cancelButton"
+                        class="secondary-btn hidden">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <div class="list-heading">
+                <h2>Your Tasks</h2>
+                <button id="refreshButton" class="secondary-btn">
+                    Refresh
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+            </div>
+
+            <p id="message" role="status"></p>
+            <div id="taskList" class="task-list"></div>
+        </section>
+    </main>
+
+    <footer>TaskFlow © 2026 | Built with HTML, CSS, JavaScript and Node.js</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
