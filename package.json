@@ -1,0 +1,22 @@
+
+{
+  "name": "todo-task-manager",
+  "version": "1.0.0",
+  "description": "A Todo Task Manager using HTML, CSS, JavaScript and Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "todo",
+    "task-manager",
+    "nodejs"
+  ],
+  "author": "Haripriya",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
