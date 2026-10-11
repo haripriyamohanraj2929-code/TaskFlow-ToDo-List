@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const FRONTEND_DIR = path.join(__dirname, "my to do list");
+const FRONTEND_DIR = __dirname;
 const DATA_FILE = path.join(__dirname, "tasks.json");
 
 app.use(express.json({ limit: "20kb" }));
